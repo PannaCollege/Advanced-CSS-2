@@ -17,14 +17,13 @@
     --accent-color-dark: #ae2012;
     --neutral-lt-color: #f8f9fa;
     --neutral-mid-color: #6c757d;
-    --border-radius: 6px;
 
     /* Nested Variable */
     --header-bgColor: var(var(--neutral-lt-color));
     --header-textColor: var(var(--tertiary-color));
 
     /* helper */
-    --spacer: 1rem;
+    --spacer: 2rem;
     --spacer-dbl: calc(var(--spacer) * 2);
     --border-radius: 6px;
     --shadow: 0 0 6px rgba(0,0,0..3);
@@ -140,7 +139,7 @@ footer {
     background-color: var(--secondary-color);
     color: var(--neutral-lt-color);
     text-align: center;
-    font-size: .8rem;
+    font-size: .8rem; 
     padding: 1rem 0 .25rem;
     margin-top: auto;
 }
