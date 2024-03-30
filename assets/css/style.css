@@ -73,6 +73,7 @@ img {
     height: auto;
 }
 
+/* Header */
 header {
     background-color: var(--tertiary-color);
     color: var(--secondary-color);
@@ -107,6 +108,7 @@ section.card {
     box-shadow: var(--shadow);
 }
 
+/* Redefine the existing variable */
 .card article.callout {
     --primary-color: var(--secondary-color);
 }
@@ -127,7 +129,7 @@ section.card {
 }
 
 .card p {
-    padding: var(--spacer) var(--spacer); 0;
+    padding: var(--spacer) var(--spacer) 0;
 }
 
 .card .btn {
@@ -135,11 +137,11 @@ section.card {
     margin: 0 0 var(--spacer) var(--spacer);
 }
 
+/* Footer */
 footer {
     background-color: var(--secondary-color);
     color: var(--neutral-lt-color);
     text-align: center;
-    font-size: .8rem; 
-    padding: 1rem 0 .25rem;
-    margin-top: auto;
+    font-size: 1.2rem; 
+    padding: 2rem 1rem;
 }

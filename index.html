@@ -54,7 +54,12 @@
         </main>
         
         <footer>
-            <p>Made with ♥ by PannaCollege, 2024.</p>
+            <span>Made with <span style="color: rgb(190, 11, 11)">♥</span> by <span style="color: rgb(232, 164, 5); font-weight: bold;">PannaCollege</span>, <span id="currentYear">2022</span>.</span>
         </footer>
     </body>
+    <script>
+        const yearSpan = document.querySelector('#currentYear');
+        const currentYear = new Date();
+        yearSpan.innerText = currentYear.getFullYear();
+    </script>
 </html>
