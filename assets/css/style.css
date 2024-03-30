@@ -17,6 +17,8 @@
     --accent-color-dark: #ae2012;
     --neutral-lt-color: #f8f9fa;
     --neutral-mid-color: #6c757d;
+    --neutral-dark-color: #2e2f31;
+    --heart: rgb(197, 9, 9);
 
     /* Nested Variable */
     --header-bgColor: var(var(--neutral-lt-color));
@@ -35,14 +37,6 @@
     box-sizing: border-box;
 }
 
-/* Local Veriable (scoped variable) 
-h1 {
-    --color: green;
-    color: var(--color);
-    background-color: var(--background-color);
-}
-*/
-
 body {
     background-color: var(--neutral-lt-color);
     color: var(--neutral-mid-color);
@@ -51,6 +45,16 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+
+    /* new design system */
+    --bg: var(--neutral-lt-color);
+    --heading: var(--neutral-lt-color);
+    --heading-bg: var(--primary-color);
+    --text-color: var(--neutral-mid-color);
+    --btn-bg: var(--secondary-color);
+    --btn-text: var(--neutral-lt-color);
+    --btn-hover-bg: var(--accent-color-bright);
+    --btn-hover-text: var(--neutral-lt-color);
 }
 
 h1 {
@@ -103,20 +107,33 @@ section.card {
 }
 
 .card article {
+    background-color: var(--bg);
     border: solid 1px var(--secondary-color);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
 
-/* Redefine the existing variable */
-.card article.callout {
-    --primary-color: var(--secondary-color);
+/* .card article.callout {
+    background-color: var(--neutral-dark-color);
+    color: var(--neutral-lt-color);
 }
+.card article.callout h2{
+    background-color: var(--neutral-dark-color);
+    color: var(--tertiary-color);
+}
+.card article.callout .btn{
+    background-color: var(--neutral-lt-color);
+    color: var(--neutral-dark-color);
+}
+.card article.callout .btn:hover{
+    background-color: var(--neutral-dark-color);
+    color: var(--tertiary-color);
+} */
 
 .card h2 {
     text-align: center;
-    background-color: var(--primary-color);
-    color: var(--neutral-lt-color);
+    background-color: var(--heading-bg);
+    color: var(--heading);
     margin-top: 0;
     padding: 0.25rem;
 }
@@ -135,9 +152,37 @@ section.card {
 .card .btn {
     display: inline-block;
     margin: 0 0 var(--spacer) var(--spacer);
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+}
+
+.card .btn:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+}
+
+[class*='style-']{
+    background-color: var(--bg);
+    color: var(--text-color);
+}
+
+.card article.style-invert {
+    --bg: var(--neutral-dark-color);
+    --text-color: var(--neutral-lt-color);
+    --heading-bg: var(--neutral-dark-color);
+    --tbn-bg: var(--tertiary-color);
+    --btn-text: var(--primary-color);
+    --btn-hover-text: var(--neutral-lt-color);
 }
 
 /* Footer */
+#logo {
+    color: var(--accent-color-bright);
+    font-weight: var(--fw-b);
+}
+#heart, #className{
+    color: var(--heart);
+}
 footer {
     background-color: var(--secondary-color);
     color: var(--neutral-lt-color);
